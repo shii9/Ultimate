@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Reusable Variables */
+  :root {
+    --primary-color: #e63946;
+    --hover-color: #d62828;
+    --text-color: #333;
+    --label-color: #555;
+    --input-bg: #fff;
+    --border-color: #ddd;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Main Container */
+  .main-container {
+    width: 100%;
+    max-width: 400px;
+    background: var(--input-bg);
+    padding: 20px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+  
+  /* Back Button */
+  .back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primary-color); /* Set color like Decline button */
+    border: none;
+    font-size: 16px;
+    color: white;
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-btn:hover {
+    background-color: var(--hover-color);
+  }
+  
+  /* Content */
+  .content {
+    text-align: center;
+    padding-top: 40px;
+  }
+  
+  .header .logo {
+    width: 40px;
+    margin-bottom: 8px;
+  }
+  
+  .header h1 {
+    font-size: 20px;
+    color: var(--text-color);
+  }
+  
+  .header .highlight {
+    color: var(--primary-color);
+  }
+  
+  /* Terms Text */
+  .terms-text {
+    text-align: center;  /* Center the terms text */
+    margin-top: 20px;
+  }
+  
+  .terms-text h2 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+  }
+  
+  .terms-text p {
+    font-size: 14px;
+    color: var(--label-color);
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* Buttons */
+  .action-buttons {
+    margin-top: 30px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .agree-btn {
+    background-color: #00bcd4;
+    color: white;
+  }
+  
+  .agree-btn:hover {
+    background-color: #0097a7;
+    transform: translateY(-2px);
+  }
+  
+  .agree-btn:active {
+    transform: translateY(1px);
+  }
+  
+  .decline-btn {
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .decline-btn:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+  }
+  
+  .decline-btn:active {
+    transform: translateY(1px);
+  }
+  

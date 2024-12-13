@@ -1,0 +1,120 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  :root {
+    --primary-color: #e63946;
+    --hover-color: #d62828;
+    --text-color: #333;
+    --label-color: #555;
+    --input-bg: #fff;
+    --radius-lg: 20px;
+    --shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Main Container */
+  .main-container {
+    width: 100%;
+    max-width: 500px; /* Increased width */
+    background: var(--input-bg);
+    padding: 40px; /* Increased padding */
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Back Button */
+  .back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 18px; /* Slightly bigger font */
+    color: var(--hover-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .back-btn span {
+    font-size: 24px; /* Bigger back arrow */
+    margin-right: 8px;
+  }
+  
+  /* Logo Section */
+  .logo-container {
+    margin-bottom: 30px; /* More space below logo */
+  }
+  
+  .logo {
+    width: 80px; /* Larger logo */
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 28px; /* Larger font size for title */
+    color: var(--text-color);
+    margin-top: 15px;
+  }
+  
+  .highlight {
+    color: var(--primary-color);
+  }
+  
+  /* Success Icon */
+  .success-icon {
+    font-size: 60px; /* Larger checkmark icon */
+    color: var(--primary-color);
+    margin: 30px 0;
+  }
+  
+  /* Success Message */
+  h2 {
+    font-size: 24px; /* Bigger heading */
+    color: var(--text-color);
+    margin-bottom: 15px;
+  }
+  
+  .message {
+    font-size: 16px; /* Slightly bigger text */
+    color: var(--label-color);
+    margin-bottom: 30px; /* More space below message */
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px; /* Bigger button */
+    font-size: 16px; /* Larger text on button */
+    font-weight: bold;
+    border: none;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .login-btn {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .login-btn:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+  }
+  

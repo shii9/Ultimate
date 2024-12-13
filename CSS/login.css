@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f8fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Main Container */
+  .main-container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Header */
+  .header .logo {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .header .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .header .highlight {
+    color: #e63946;
+  }
+  
+  /* Input Fields */
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #e63946;
+    box-shadow: 0 0 5px rgba(230, 57, 70, 0.3);
+  }
+  
+  .forgot-password {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #e63946;
+    text-decoration: none;
+    text-align: right;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #e63946;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .btn:hover {
+    background-color: #d62828;
+  }
+  
+  /* Separator */
+  .separator {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #666;
+    position: relative;
+  }
+  
+  .separator span {
+    background: #fff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .separator:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+    z-index: 0;
+  }
+  
+  /* Social Buttons */
+  .social-login {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .social-btn {
+    flex: 1;
+    padding: 10px 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .google {
+    background-color: #db4437;
+  }
+  
+  .twitter {
+    background-color: #1da1f2;
+  }
+  
+  .facebook {
+    background-color: #4267b2;
+  }
+  
+  .social-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Signup Link */
+  .signup-text {
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  .signup-link {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .signup-link:hover {
+    text-decoration: underline;
+  }
+  
