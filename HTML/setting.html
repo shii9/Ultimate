@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Main Container */
+        .settings-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            padding: 2rem;
+        }
+
+        /* Header Section */
+        .settings-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .settings-header .icon {
+            font-size: 3rem;
+            color: #4b5563;
+        }
+
+        .settings-header .title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4b5563;
+        }
+
+        /* Menu Items */
+        .menu {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #374151;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background-color: #f3f4f6;
+            color: #6d28d9;
+            transform: translateY(-5px);
+        }
+
+        .menu-item .icon {
+            font-size: 2rem;
+            color: #9ca3af;
+            margin-right: 1.5rem;
+        }
+
+        .menu-item:hover .icon {
+            color: #6d28d9;
+        }
+
+        /* Logout Button */
+        .logout {
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            color: #ef4444;
+            font-weight: bold;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            font-size: 1.25rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logout:hover {
+            background-color: #fee2e2;
+            transform: translateY(-5px);
+        }
+
+        .logout .icon {
+            font-size: 2rem;
+            margin-right: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="settings-container">
+        <div class="settings-header">
+            <span class="icon">⚙️</span>
+            <h1 class="title">Settings</h1>
+        </div>
+
+        <div class="menu">
+            
+            <a href="home.html">
+                <div class="menu-item">
+                    <span class="icon">👤</span>
+                    <span>You are In Ultimate</span>
+                </div>
+            </a>
+            <div class="menu-item">
+                <span class="icon">📋</span>
+                <span>Autofill And Password</span>
+            </div>
+            <div class="menu-item">
+                <span class="icon">🔒</span>
+                <span>Security</span>
+            </div>
+            <div class="menu-item">
+                <span class="icon">🌐</span>
+                <span>Language</span>
+            </div>
+            <div class="menu-item">
+                <span class="icon">➕</span>
+                <span>Add Account</span>
+            </div>
+            <div class="menu-item">
+                <span class="icon">⚙️</span>
+                <span>System</span>
+            </div>
+            <div class="menu-item">
+                <span class="icon">📦</span>
+                <span>About Ultimate</span>
+            </div>
+        </div>
+
+        <a href="login.html">
+            <div class="logout">
+                <span class="icon">🚪</span>
+                <span>Log Out</span>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>
