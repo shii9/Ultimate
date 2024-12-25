@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate - Profile Page</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+      overflow-x: hidden;
+    }
+
+    /* Main Container */
+    .main-container {
+      width: 100%;
+      display: flex;
+      background-color: #fff;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #ebe6f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar:hover {
+      transform: scale(1.02);
+    }
+
+    .sidebar .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .sidebar .logo span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+      width: 100%;
+      padding-top: 20px;
+    }
+
+    .sidebar nav ul li {
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .sidebar nav ul li a {
+      text-decoration: none;
+      color: #555;
+      font-size: 16px;
+      padding: 12px 20px;
+      display: block;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar nav ul li a:hover {
+      background-color: #d8cdf5;
+      color: #000;
+    }
+
+    .sidebar .logout {
+      margin-top: auto; /* Pushes the logout button to the bottom */
+      padding: 10px 20px;
+      background-color: #ff5252;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar .logout:hover {
+      background-color: #ff7979;
+    }
+
+    /* Content Section */
+    .content {
+      margin-left: 250px;
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: margin-left 0.3s;
+    }
+
+    .content h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #333;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .profile-picture {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      animation: scaleUp 1.2s ease-in-out;
+    }
+
+    .profile-picture img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #ebe6f8;
+      transition: transform 0.3s;
+    }
+
+    .profile-picture img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-info {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      transition: background-color 0.3s;
+    }
+
+    .info-row:hover {
+      background-color: #f9f9ff;
+      border-radius: 8px;
+      padding: 10px 0;
+    }
+
+    .info-row label {
+      flex: 1;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .info-row input {
+      flex: 2;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      width: 100%;
+      transition: border-color 0.3s, background-color 0.3s;
+    }
+
+    .info-row input:focus {
+      outline: none;
+      border-color: #7a5cf0;
+      background-color: #f7f5ff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: absolute;
+        transform: translateX(-100%);
+        z-index: 999;
+        height: 100vh;
+        width: 200px;
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #7a5cf0;
+        padding: 10px 15px;
+        color: white;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleUp {
+      from {
+        transform: scale(0.8);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span>Ultimate</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">General</a></li>
+          <li><a href="#">Account</a></li>
+          <li><a href="#">More</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Flowers</a></li>
+        </ul>
+      </nav>
+      <a href="login.html"><button class="logout">Log Out</button></a>
+    </aside>
+
+    <main class="content">
+      <h1>Profile</h1>
+      <div class="profile-picture">
+        <img src="image/mypic.png" alt="Profile Picture">
+      </div>
+      <div class="profile-info">
+        <div class="info-row">
+          <label for="username">Username:</label>
+          <input type="text" id="username" value="SHI_9">
+        </div>
+        <div class="info-row">
+          <label for="email">Email:</label>
+          <input type="email" id="email" value="souravhossenshi_9@gmail.com">
+        </div>
+        <div class="info-row">
+          <label for="phone">Phone Number:</label>
+          <input type="text" id="phone" value="01859920666">
+        </div>
+        <div class="info-row">
+          <label for="country">Country:</label>
+          <input type="text" id="country" value="Bangladesh">
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
