@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate - Inbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .sidebar-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .sidebar-icon:hover {
+            color: #dc2626;
+            transform: scale(1.1);
+        }
+
+        .sidebar-icon img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 8px;
+        }
+
+        .sidebar-header img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .search-bar {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+        }
+
+        .search-bar:focus {
+            outline: none;
+            box-shadow: 0 0 8px #e63946;
+        }
+
+        .logout-btn {
+            background-color: #e63946;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #b02635;
+        }
+
+        .content-image {
+            height: 14rem;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .content-image:hover {
+            transform: scale(1.05);
+        }
+
+        .section-header {
+            background-color: #e63946;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-header:hover {
+            background-color: #b02635;
+        }
+
+        .description {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-description {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-100">
+    <div class="flex h-screen">
+        <div class="bg-white shadow-lg w-48 flex-shrink-0 flex flex-col py-4 px-4">
+            <!-- Centering the logo -->
+            <div class="flex items-center justify-center mb-8">
+                <img src="image/logo.png" alt="Ultimate Logo" class="w-12 h-12">
+            </div>
+
+            <div class="space-y-6 mt-4">
+                <div class="sidebar-icon hover:text-red-500 transition">
+                    <a href="index.html">
+                        <img src="image/Home.png" alt="Home">
+                        <span class="text-lg font-medium">Home</span>
+                    </a>
+                </div>
+                <a href="Esports.html">
+                    <div class="sidebar-icon hover:text-red-500 transition">
+                        <img src="image/game.png" alt="Games">
+                        <span class="text-sm font-medium">Games</span>
+                    </div>
+                </a>
+                <a href="inbox.html">
+                    <div class="sidebar-icon hover:text-red-500 transition">
+                        <img src="image/inbox.png" alt="Inbox">
+                        <span class="text-sm font-medium">Inbox</span>
+                    </div>
+                </a>
+                <a href="News.html">
+                    <div class="sidebar-icon hover:text-red-500 transition">
+                        <img src="image/news.png" alt="News">
+                        <span class="text-sm font-medium">News</span>
+                    </div>
+                </a>
+                <a href="https://www.facebook.com">
+                <div class="sidebar-icon hover:text-red-500 transition">
+                    <img src="image/facebook.png" alt="Facebook">
+                    <span class="text-sm font-medium">Facebook</span>
+                </div>
+                </a>
+                <a href="https://www.google.com/maps/">
+                    <div class="sidebar-icon hover:text-red-500 transition">
+                    <img src="image/map.png" alt="Map">
+                    <span class="text-sm font-medium">Map</span>
+                </div></a>
+                <a href="https://www.youtube.com/">
+                <div class="sidebar-icon hover:text-red-500 transition">
+                    <img src="image/youtube.png" alt="YouTube">
+                    <span class="text-sm font-medium">YouTube</span>
+                </div></a>
+                <a href="setting.html">
+                    <div class="sidebar-icon hover:text-red-500 transition">
+                        <img src="image/security.png" alt="Security">
+                        <span class="text-sm font-medium">Security</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="flex-1 overflow-y-auto bg-gray-50 p-6">
+            <div class="flex justify-between items-center mb-8">
+                <a href="search.html">
+                    <input type="text" placeholder="Search" class="search-bar rounded-md w-full max-w-md p-2 placeholder-white text-sm">
+                </a>
+
+                <div class="flex items-center space-x-4 ml-4">
+                    <a href="user.html">
+                    <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+                        <img src="image/user.png" class="rounded-full">
+                    </div>
+                    </a>
+                    <a href="login.html">
+                        <button class="logout-btn">Logout</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Inbox Section -->
+            <div>
+                <a href="Inbox.html">
+                    <h2 class="text-lg font-bold bg-red-500 text-white py-2 px-4 rounded">Inbox</h2>
+                </a>
+                <div class="mt-4 bg-white shadow rounded-lg p-4 space-y-4">
+                    <div class="flex items-center justify-between border-b pb-3">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Message from Alice</h3>
+                            <p class="text-sm text-gray-600">Hey, how are you doing? Let’s catch up soon!</p>
+                        </div>
+                        <span class="text-xs text-gray-500">2h ago</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b pb-3">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Promotion from Store XYZ</h3>
+                            <p class="text-sm text-gray-600">Get 50% off on all items! Limited time offer.</p>
+                        </div>
+                        <span class="text-xs text-gray-500">1 day ago</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b pb-3">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">System Notification</h3>
+                            <p class="text-sm text-gray-600">Your password was changed successfully.</p>
+                        </div>
+                        <span class="text-xs text-gray-500">3 days ago</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b pb-3">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Message from John</h3>
+                            <p class="text-sm text-gray-600">Let’s discuss the project deadline tomorrow.</p>
+                        </div>
+                        <span class="text-xs text-gray-500">5 days ago</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Reminder from Event Planner</h3>
+                            <p class="text-sm text-gray-600">Don’t forget to RSVP for the company event.</p>
+                        </div>
+                        <span class="text-xs text-gray-500">1 week ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
